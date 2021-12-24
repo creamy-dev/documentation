@@ -14,15 +14,18 @@
   - [Multicraft](#multicraft)
     - [Backend](#backend)
     - [Frontend](#frontend)
-  - [JARs](#jars)
 # Dependencies
 First, connect via SSH for this guide to save hassle.  
 ## Java
-If using Minecraft > 1.13, install the latest version of java.
+If using Minecraft 1.17, install Java 16.
 ```bash
 sudo apt install openjdk-16-jre -y
 ```
-Else, install java 8.
+Else if you are using Minecraft 1.18, install Java 18.
+```bash
+sudo apt install openjdk-18-jre -y
+```
+Else, install Java 8.
 ```bash
 sudo apt install openjdk-8-jre -y
 ```
@@ -148,15 +151,7 @@ Go to `http://ip/multicraft`.
 Follow the prompts until you get to the database part. Select `MySQL`. Enter `multicraft` for the username. Enter the user password for the password.  
 Follow the prompts, and repeat the process for the other database.  
 Update the config `/home/minecraft/multicraft/multicraft.conf` with the data on screen.  
-Finally, delete the install.php file when ready.
+Finally, delete the install.php file when it tells you to.
 ```bash
 sudo rm -rf /var/www/html/multicraft/install.php
 ```
-## JARs
-This is a tutorial to add custom JAR files to Multicraft.  
-First, download the JAR file of your choice.
-```bash
-curl url > server.jar
-```
-Then, copy the JAR file to `/home/minecraft/multicraft/jar/`.  
-You can type in the path in the server creation screen.
