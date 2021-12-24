@@ -1,4 +1,6 @@
+# Adding custom servers to Multicraft
 # Table of Contents
+- [Adding custom servers to Multicraft](#adding-custom-servers-to-multicraft)
 - [Table of Contents](#table-of-contents)
 - [Downloading](#downloading)
 # Downloading
