@@ -16,7 +16,9 @@ And click on useast-www.securly.com, and click remove.
 Click done.
 ## Source
 ```js
-if (window.location.origin !== "https://useast-www.securly.com") throw "flying bird";
+if (window.location.origin !== "https://useast-www.securly.com")
+  throw "flying bird";
+
 window.cookie = "";
 
 var _ = new Blob();
@@ -26,17 +28,17 @@ function sleep(ms) {
 }
 
 async function main() {
-    for (let i = 0; i < 1500; i++) {
-        document.cookie = URL.createObjectURL(_) + "=" + URL.createObjectURL(_);
-        URL.revokeObjectURL(_);
+  for (let i = 0; i < 1500; i++) {
+    document.cookie = URL.createObjectURL(_) + "=" + URL.createObjectURL(_);
+    URL.revokeObjectURL(_);
 
-        document.title = "🐦 " + i + "/1500";
-        await sleep(10);
-    }
+    document.title = "🐦 " + i + "/1500";
+    await sleep(10);
+  }
 
-    document.title = "🐦 Done!";
+  document.title = "🐦 Done!";
 
-    window.location.replace("https://google.com");
+  window.location.replace("https://google.com");
 }
 
 main();
